@@ -1,0 +1,82 @@
+.about {
+    padding-top: 100px;
+
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 400px 570px;
+        grid-template-rows: minmax(245px, auto) minmax(255px, auto);
+        grid-auto-rows: minmax(245px, auto);
+        column-gap: 70px;
+        row-gap: 40px;
+        justify-content: center;
+    }
+
+    &_photo {
+        grid-row: 1/3;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_descr {
+        padding-top: 5px;
+       .divider {
+        margin-left: 0;
+       }
+    }
+
+    &_subtitle {
+        position: relative;
+        @include before_circle;
+        padding-top: 1px;
+        padding-left: 12px;
+    }
+
+    &_title {
+        margin-top: 6px;
+    }
+
+    &_text {
+        margin-top: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+
+    &_skill {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(115px, auto));
+        grid-template-rows: repeat(2, 90px);
+        row-gap: 20px;
+        column-gap: 40px;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+        }
+
+        &-icon {
+            position: relative;
+            padding: 15px 0 0 15px;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+
+        &-text {
+            margin-top: 6px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+
+
+    }
+
+}

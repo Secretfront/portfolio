@@ -1,0 +1,118 @@
+.contacts {
+    margin: 120px 0 120px 0;
+
+    &_wrapper {
+        padding: 0 35px 0 52px;
+        display: grid;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+    }
+
+    &_photo {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_info {
+        padding-top: 5px;
+
+        .divider {
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    &_subtitle {
+        position: relative;
+        @include before_circle;
+        padding-top: 1px;
+        padding-left: 12px;
+    }
+
+    &_text,
+    &_social {
+        margin-top: 21px;
+    }
+
+    &_link {
+        margin-right: 25px;
+
+        img {
+            max-width: 30px;
+            max-height: 30px;
+        }
+    }
+
+    &_form {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: 45px 190px 45px;
+        justify-content: space-between;
+        row-gap: 30px;
+
+        label {
+            position: absolute;
+            display: block;
+            height: 18px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            top: -9px;
+            left: 12px;
+        }
+
+    }
+
+    &_input {
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+
+    &_textarea {
+        grid-column: 1 / 3;
+        position: relative;
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+            font-size: 12px;
+        }
+    }
+
+    &_triggers {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 35px;
+    }
+
+    &_policy {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    &_btn {
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
