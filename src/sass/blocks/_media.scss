@@ -215,6 +215,7 @@
             grid-template-columns: 300px;
             grid-template-rows: repeat(6, minmax (44px, auto));
             row-gap: 15px;
+            justify-content: center;
         }
     }
 
@@ -222,7 +223,8 @@
         .divider {
             margin-top: 15px;
         }
-        margin-top: 40px;
+
+        margin: 40px 0 50px 0;
 
         &_photo {
             display: none;
@@ -231,15 +233,39 @@
         &_wrapper {
             padding: 0;
             grid-template-columns: 300px;
+            justify-content: center;
         }
 
         &_title {
             margin-top: 26px;
         }
-        &_form {
-            grid-template-columns: 1fr;
-            grid-template-rows: 45px 190px 45px;
 
+        &_form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+
+        }
+        &_input {
+            height: 45px;
+        }
+        &_textarea {
+            height: 145px;
+        }
+        &_triggers {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            row-gap: 20px;
+        }
+        &_policy {
+            grid-row: 1 / 2;
+            width: 180px;
+            justify-self: center;
+        }
+        &_btn {
+            width: 220px;
+            justify-self: center;
         }
     }
 }
